@@ -1,30 +1,20 @@
-# AtmoSync - Micro-Climate Arbitrage Analytics
+import json
+import random
+from datetime import datetime, timezone
 
-from datetime import datetime
 
-def generate_sample_data():
-    readings = {
-        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "temperature_c": 8.5,
-        "humidity_percent": 72,
-        "vibration_level": 2.1
+def generate_sensor_reading():
+    reading = {
+        "container_id": "CONTAINER-001",
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "temperature_c": round(random.uniform(2.0, 10.0), 2),
+        "humidity_percent": round(random.uniform(50.0, 90.0), 2),
+        "vibration_level": round(random.uniform(0.1, 5.0), 2)
     }
-    return readings
 
-
-def analyze_conditions(data):
-    print("\n--- AtmoSync Environmental Report ---")
-    print("Timestamp:", data["timestamp"])
-    print("Temperature:", data["temperature_c"], "°C")
-    print("Humidity:", data["humidity_percent"], "%")
-    print("Vibration:", data["vibration_level"])
-
-    if data["temperature_c"] > 8:
-        print("Alert: Temperature is above the sample threshold.")
-    else:
-        print("Temperature is within the sample threshold.")
+    return reading
 
 
 if __name__ == "__main__":
-    sample_data = generate_sample_data()
-    analyze_conditions(sample_data)
+    sensor_data = generate_sensor_reading()
+    print(json.dumps(sensor_data, indent=4))
