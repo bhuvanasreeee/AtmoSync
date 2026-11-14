@@ -94,6 +94,8 @@ if __name__ == "__main__":
                 else:
                     print(json.dumps(sensor_data, indent=4))
 
+                    with open("data/sensor_readings.jsonl", "a", encoding="utf-8") as file:
+                        file.write(json.dumps(sensor_data) + "\n")
             print("-" * 50)
             time.sleep(2)
 

@@ -1,0 +1,15 @@
+{"container_id": "CONTAINER-001", "timestamp": "2026-11-14T16:42:42.539783+00:00", "temperature_c": 2.38, "humidity_percent": 86.36, "vibration_level": 2.77}
+{"container_id": "CONTAINER-002", "timestamp": "2026-11-14T16:42:42.541962+00:00", "temperature_c": 7.0, "humidity_percent": 53.93, "vibration_level": 0.2}
+{"container_id": "CONTAINER-003", "timestamp": "2026-11-14T16:42:42.548973+00:00", "temperature_c": 3.12, "humidity_percent": 61.53, "vibration_level": 1.19}
+{"container_id": "CONTAINER-001", "timestamp": "2026-11-14T16:42:44.557662+00:00", "temperature_c": 5.75, "humidity_percent": 85.71, "vibration_level": 1.44}
+{"container_id": "CONTAINER-002", "timestamp": "2026-11-14T16:42:44.561732+00:00", "temperature_c": 9.53, "humidity_percent": 55.07, "vibration_level": 2.55}
+{"container_id": "CONTAINER-003", "timestamp": "2026-11-14T16:42:44.569255+00:00", "temperature_c": 8.85, "humidity_percent": 53.09, "vibration_level": 1.61}
+{"container_id": "CONTAINER-001", "timestamp": "2026-11-14T16:42:46.576823+00:00", "temperature_c": 7.64, "humidity_percent": 79.82, "vibration_level": 4.86}
+{"container_id": "CONTAINER-002", "timestamp": "2026-11-14T16:42:46.586257+00:00", "temperature_c": 9.63, "humidity_percent": 73.53, "vibration_level": 1.63}
+{"container_id": "CONTAINER-003", "timestamp": "2026-11-14T16:42:46.598186+00:00", "temperature_c": 7.99, "humidity_percent": 82.18, "vibration_level": 1.25}
+{"container_id": "CONTAINER-001", "timestamp": "2026-11-14T16:42:48.617639+00:00", "temperature_c": 5.6, "humidity_percent": 70.55, "vibration_level": 1.57}
+{"container_id": "CONTAINER-002", "timestamp": "2026-11-14T16:42:48.625179+00:00", "temperature_c": 8.44, "humidity_percent": 58.16, "vibration_level": 3.82}
+{"container_id": "CONTAINER-003", "timestamp": "2026-11-14T16:42:48.636721+00:00", "temperature_c": 7.69, "humidity_percent": 86.29, "vibration_level": 1.39}
+{"container_id": "CONTAINER-001", "timestamp": "2026-11-14T16:42:50.649125+00:00", "temperature_c": 6.06, "humidity_percent": 78.67, "vibration_level": 1.12}
+{"container_id": "CONTAINER-002", "timestamp": "2026-11-14T16:42:50.656588+00:00", "temperature_c": 9.38, "humidity_percent": 73.95, "vibration_level": 3.56}
+{"container_id": "CONTAINER-003", "timestamp": "2026-11-14T16:42:50.667501+00:00", "temperature_c": 3.06, "humidity_percent": 80.71, "vibration_level": 3.75}
