@@ -85,10 +85,13 @@ Current Progress
 - Sensor data validation implemented.
 - JSONL data storage implemented.
 - Simulator testing completed.
+- Apache Kafka 4.4.0 setup completed.
+- Kafka broker started successfully.
+
 
 Future Development
 
-- Apache Kafka data streaming.
+- Kafka topic creation and data streaming.
 - Snowflake data storage.
 - dbt-based data transformation.
 - SQL analytics.
