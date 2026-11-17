@@ -87,6 +87,7 @@ Current Progress
 - Simulator testing completed.
 - Apache Kafka 4.4.0 setup completed.
 - Kafka broker started successfully.
+- Kafka topic `container-sensor-events` created successfully.
 
 
 Future Development
