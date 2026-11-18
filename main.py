@@ -3,6 +3,14 @@ import random
 import time
 import math
 from datetime import datetime, timezone
+from kafka import KafkaProducer
+KAFKA_TOPIC = "container-sensor-events"
+KAFKA_SERVER = "localhost:9092"
+
+producer = KafkaProducer(
+    bootstrap_servers=[KAFKA_SERVER],
+    value_serializer=lambda data: json.dumps(data).encode("utf-8")
+)
 
 
 def generate_sensor_reading(container_id):
@@ -65,6 +73,10 @@ def validate_sensor_reading(reading):
             )
 
     return errors
+def send_to_kafka(reading):
+    producer.send(KAFKA_TOPIC, value=reading)
+    producer.flush()
+    print("Sensor reading sent to Kafka successfully!")
 
 
 if __name__ == "__main__":
@@ -93,6 +105,7 @@ if __name__ == "__main__":
                         print("-", error)
                 else:
                     print(json.dumps(sensor_data, indent=4))
+                    send_to_kafka(sensor_data)
 
                     with open("data/sensor_readings.jsonl", "a", encoding="utf-8") as file:
                         file.write(json.dumps(sensor_data) + "\n")

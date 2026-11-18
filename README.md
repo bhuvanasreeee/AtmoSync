@@ -88,11 +88,14 @@ Current Progress
 - Apache Kafka 4.4.0 setup completed.
 - Kafka broker started successfully.
 - Kafka topic `container-sensor-events` created successfully.
-
+- Python Kafka library (kafka-python) installed.
+- Python Kafka producer developed.
+- IoT simulator connected to Kafka topic `container-sensor-events`.
+- Sensor data transmission to Kafka tested successfully.
 
 Future Development
 
-- Kafka topic creation and data streaming.
+- Kafka consumer development and data processing.
 - Snowflake data storage.
 - dbt-based data transformation.
 - SQL analytics.
