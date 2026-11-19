@@ -92,10 +92,14 @@ Current Progress
 - Python Kafka producer developed.
 - IoT simulator connected to Kafka topic `container-sensor-events`.
 - Sensor data transmission to Kafka tested successfully.
+- Python Kafka consumer developed.
+- Kafka consumer connected to `container-sensor-events`.
+- Incoming sensor messages received successfully.
+- Sensor data validation performed by the consumer.
+- Kafka producer-consumer communication tested successfully.
 
 Future Development
 
-- Kafka consumer development and data processing.
 - Snowflake data storage.
 - dbt-based data transformation.
 - SQL analytics.
