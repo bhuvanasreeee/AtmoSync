@@ -97,6 +97,21 @@ Current Progress
 - Incoming sensor messages received successfully.
 - Sensor data validation performed by the consumer.
 - Kafka producer-consumer communication tested successfully.
+- Snowflake account activated and configured.
+- Created Snowflake database `ATMOSYNC_DB`.
+- Created `RAW` schema.
+- Created `SENSOR_READINGS` table for raw sensor data.
+- Created `COMMODITY_PRICES` table for raw commodity pricing data.
+- Verified both table structures using DESCRIBE TABLE.
+- Snowflake Python connector configured successfully.
+- Kafka consumer connected to Snowflake.
+- Sensor readings inserted into the Snowflake SENSOR_READINGS table.
+- Sensor data ingestion verified by querying Snowflake.
+- Snowflake connection established from Python.
+- Kafka consumer integrated with Snowflake.
+- Sensor readings successfully inserted into the SENSOR_READINGS table.
+- Mock commodity pricing data prepared and inserted into the COMMODITY_PRICES table.
+- Verified sensor readings and commodity pricing records using Snowflake SQL queries.
 
 Future Development
 

@@ -2,6 +2,7 @@ import json
 import math
 from datetime import datetime
 from kafka import KafkaConsumer
+from snowflake_writer import create_snowflake_connection, insert_sensor_reading
 
 KAFKA_TOPIC = "container-sensor-events"
 KAFKA_SERVER = "localhost:9092"
@@ -63,6 +64,8 @@ consumer = KafkaConsumer(
 
 print("AtmoSync Kafka Consumer Started")
 print("Waiting for sensor messages...\n")
+snowflake_connection = create_snowflake_connection()
+print("Connected to Snowflake successfully!")
 
 try:
     for message in consumer:
@@ -78,6 +81,13 @@ try:
             print("Received valid sensor reading:")
             print(json.dumps(sensor_data, indent=4))
 
+            try:
+                insert_sensor_reading(snowflake_connection, sensor_data)
+                snowflake_connection.commit()
+            except Exception as error:
+                snowflake_connection.rollback()
+                print("Snowflake insertion failed:", error)
+
         print("-" * 50)
 
 except KeyboardInterrupt:
@@ -85,3 +95,4 @@ except KeyboardInterrupt:
 
 finally:
     consumer.close()
+    snowflake_connection.close()
